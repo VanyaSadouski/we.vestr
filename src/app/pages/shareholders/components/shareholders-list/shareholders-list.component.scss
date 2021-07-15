@@ -1,0 +1,33 @@
+.shareholders-table {
+  .mat-header-cell,
+  .mat-cell {
+    padding: 1rem;
+  }
+
+  .mat-header-cell {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .mat-cell {
+    font-size: 0.8rem;
+  }
+
+  // .mat-row {
+  //   &:hover {
+  //     @include material-color($backgroundColor, accent, 100);
+  //   }
+  // }
+
+  &__actions {
+    width: 200px;
+  }
+
+  &__remove-btn {
+    cursor: pointer;
+  }
+
+  &__edit-btn {
+    cursor: pointer;
+  }
+}

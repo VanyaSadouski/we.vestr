@@ -1,0 +1,15 @@
+src/assets/
+dist/
+node_modules/
+coverage/
+.idea/
+.vsid/
+.angulardoc.json
+CHANGELOG.md
+.editorconfig
+.gitignore
+.prettierignore
+.stylelintignore
+src/favicon.ico
+etc/
+.browserslistrc

@@ -1,0 +1,30 @@
+<div class="shareholders p-3">
+  <div class="shareholders__header w-100 d-flex justify-content-between mb-4">
+    <div class="d-flex align-items-center">
+      <div class="shareholders__title">Shareholders</div>
+      <button
+        (click)="onAddShareholder()"
+        mat-raised-button
+        matTooltip="Add shareholder"
+      >
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div class="d-flex align-items-center">
+      <button
+        (click)="onSplitStock()"
+        mat-raised-button
+        matTooltip="Split stock"
+      >
+        <mat-icon>cached</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <app-shareholders-list
+      (removeShareholders)="onRemoveShareholder($event)"
+      [shareholders]="shareholders$ | async"
+    ></app-shareholders-list>
+  </div>
+</div>

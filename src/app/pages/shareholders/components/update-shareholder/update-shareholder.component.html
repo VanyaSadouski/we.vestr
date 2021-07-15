@@ -1,0 +1,6 @@
+<app-shareholder-form
+  (save)="updateShareholder($event)"
+  [isEdit]="true"
+  [title]="'Update shareholder'"
+  [shareholder]="shareholder$ | async"
+></app-shareholder-form>
