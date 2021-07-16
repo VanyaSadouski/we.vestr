@@ -33,7 +33,9 @@ export class ShareholdersListComponent implements OnChanges {
   constructor(private router: Router) {}
 
   public ngOnChanges(): void {
-    this.dataSource.data = [...this.shareholders];
+    if (this.shareholders) {
+      this.dataSource.data = [...this.shareholders];
+    }
   }
 
   public onRemoveShareholder(id: number) {

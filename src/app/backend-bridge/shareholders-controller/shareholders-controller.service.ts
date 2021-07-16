@@ -62,15 +62,15 @@ export class ShareholdersControllerService {
 
   public addShareholder(shareholderForm: IShareholderForm) {
     let maxId;
-    if(this.shareholders.length){
-       maxId = Math.max.apply(
+    if (this.shareholders.length) {
+      maxId = Math.max.apply(
         Math,
         this.shareholders.map(function (o) {
           return o.id;
         })
       );
-    }else{
-      maxId = 0
+    } else {
+      maxId = 0;
     }
     this.shareholders.push({ ...shareholderForm, id: ++maxId });
     return of(this.shareholders);
@@ -105,13 +105,16 @@ export class ShareholdersControllerService {
     );
   }
 
-  public checkStocksAvailability(stockCount: number = 0, shareholderId:number) {
+  public checkStocksAvailability(
+    stockCount: number = 0,
+    shareholderId: number
+  ) {
     return this.getShareHolders().pipe(
       map((shareholders) => {
         let stocksCount = this.stocksController.stocksCount - stockCount;
         shareholders.forEach((shareholder) => {
-          if(shareholderId && shareholderId === shareholder.id){
-            return
+          if (shareholderId && shareholderId === shareholder.id) {
+            return;
           }
           stocksCount = stocksCount - shareholder.stockCount;
         });

@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ShareholdersModuleTestingModule } from '@pages/shareholders/shareholders.module.testing';
 
 import { CreateShareholderComponent } from './create-shareholder.component';
 
@@ -7,9 +8,9 @@ describe('CreateShareholderComponent', () => {
   let fixture: ComponentFixture<CreateShareholderComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [CreateShareholderComponent],
-    }).compileComponents();
+    await TestBed.configureTestingModule(
+      ShareholdersModuleTestingModule
+    ).compileComponents();
   });
 
   beforeEach(() => {

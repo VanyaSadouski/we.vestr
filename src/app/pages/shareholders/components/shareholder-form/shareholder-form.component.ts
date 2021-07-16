@@ -56,7 +56,10 @@ export class ShareholderFormComponent implements OnInit {
 
   public maxCountLimit() {
     this.shareholdersController
-      .checkStocksAvailability(this.form.get('stockCount').value, this.shareholder?this.shareholder.id : null)
+      .checkStocksAvailability(
+        this.form.get('stockCount').value,
+        this.shareholder ? this.shareholder.id : null
+      )
       .subscribe((isStocksAvailable) => {
         this.isStocksAvailable = isStocksAvailable;
         if (!isStocksAvailable) {

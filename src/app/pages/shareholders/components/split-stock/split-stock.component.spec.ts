@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ShareholdersModuleTestingModule } from '@pages/shareholders/shareholders.module.testing';
 
 import { SplitStockComponent } from './split-stock.component';
 
@@ -7,9 +8,9 @@ describe('SplitStockComponent', () => {
   let fixture: ComponentFixture<SplitStockComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [SplitStockComponent],
-    }).compileComponents();
+    await TestBed.configureTestingModule(
+      ShareholdersModuleTestingModule
+    ).compileComponents();
   });
 
   beforeEach(() => {
